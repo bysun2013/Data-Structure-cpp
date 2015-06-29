@@ -1,0 +1,134 @@
+#include <iostream>
+#include <stack>
+#include <queue>
+#include "binary_tree.h"
+using namespace std;
+
+template <class T>
+tree<T>:：tree()
+{
+	root=create();
+}
+
+template <class T>
+tree<T>:：tree(string s)
+{
+	root=create(s);
+}
+
+template <class T>
+node<T>* tree<T>::create()
+{
+	node<T> *root;
+	T e;
+	cout<<"输入数据：";
+	cin>>e;
+	if(e=='#')
+		root=NULL;
+	else{
+		root=new node<T>;
+		root->data=e;
+		root->lchild=create();
+		root->rchild=create();
+	}
+	return root;
+}
+
+template <class T>
+node<T>* tree<T>:：create(string s)
+{
+	node<T> *root;
+	cahr e;
+	if(s[i]=='#')
+	{
+		root=NULL;
+		i++;
+	}
+	else{
+		root=new node<T>;
+		root->data=s[i];
+		i++;
+		root->lchild=create(s);
+		root->rchild=create(s);
+	}
+	return root;
+}
+
+template<class T>
+tree<T>::~tree()
+{
+	release(root);
+}
+
+template<class T>
+void tree<T>::release(node<T>*root)
+{
+	if(root!=NULL)
+	{
+		release(root->lchild);
+		release(root->rchild);
+		delete root;
+	}
+}
+//两种前序遍历方法
++template<class T>
+void tree::PreTraverse()
+{
+
+}
+
+template<class T>
+void preTraverse()
+{
+
+}
+
+template<class T>
+void midTraverse()
+{
+
+}
+
+template<class T>
+void posTraverse()
+{
+
+}
+
+template<class T>
+void levTraverse()
+{
+
+}
+
+template<class T>
+node<T>* getRoot()
+{
+	return root;
+}
+
+template<class T>
+int tree<T>::getLen(node<T>* root)
+{
+	int i,j;
+if(root==NULL)
+	return 0;
+else{
+	i=getLen(root->lchild);
+	j=getLen(root->rchild)
+	return i>j?i+1:j+1;
+	}
+}
+
+template<class T>
+node<T>* tree<T>::getParent()
+{
+  queue<node<T>*> q;
+  q.
+}
+
+template<class T>
+bool tree<T>::delchild(node* n,bool LR)
+{
+
+}
